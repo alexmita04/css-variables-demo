@@ -1,24 +1,13 @@
-const spacingInput = document.getElementById("spacing");
-const blurInput = document.getElementById("blur");
-const colorInput = document.getElementById("color");
-const imgContainer = document.querySelector(".image-container");
-const img = document.querySelector("img");
+const inputs = document.querySelectorAll("input");
 
-blurInput.addEventListener("input", (e) => {
-  const blurValue = e.target.value + "px";
-  document.documentElement.style.setProperty(`--${e.target.name}`, blurValue);
-});
+inputs.forEach((input) =>
+  input.addEventListener("input", (e) => {
+    const units = input.dataset.units;
+    let value;
+    if (units) {
+      value = e.target.value + units;
+    } else value = e.target.value;
 
-spacingInput.addEventListener("input", (e) => {
-  const spacingValue = e.target.value + "px";
-  document.documentElement.style.setProperty(
-    `--${e.target.name}`,
-    spacingValue
-  );
-});
-
-colorInput.addEventListener("input", (e) => {
-  const colorValue = e.target.value;
-  console.log(colorValue);
-  document.documentElement.style.setProperty(`--base`, colorValue);
-});
+    document.documentElement.style.setProperty(`--${e.target.name}`, value);
+  })
+);
