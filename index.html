@@ -13,7 +13,42 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Changing CSS Variables with JS</h1>
+    <div class="container">
+      <h1 class="highlight">Changing CSS Variables with JS</h1>
+      <div class="input-groups">
+        <div class="input-group">
+          <label for="spacing">Spacing</label>
+          <input
+            type="range"
+            id="spacing"
+            name="spacing"
+            min="0"
+            max="200"
+            data-units="px"
+            value="10"
+          />
+        </div>
+        <div class="input-group">
+          <label for="blur">blur</label>
+          <input
+            type="range"
+            id="blur"
+            name="blur"
+            min="0"
+            max="200"
+            data-units="px"
+            value="10"
+          />
+        </div>
+        <div class="input-group">
+          <label for="color">Color</label>
+          <input type="color" name="color" id="color" value="#D64933" />
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="./images/main-image.jpg" alt="main-image" />
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>
