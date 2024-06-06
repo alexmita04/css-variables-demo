@@ -7,7 +7,7 @@
 :root {
   --base: #d64933;
   --spacing: 10px;
-  --blur: 10px;
+  --blur: 0;
 }
 
 body {
@@ -61,4 +61,5 @@ body {
   width: 650px;
   height: auto;
   border-radius: 10px;
+  filter: blur(var(--blur));
 }
