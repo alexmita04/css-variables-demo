@@ -6,7 +6,7 @@
 
 :root {
   --base: #d64933;
-  --spacing: 10px;
+  --spacing: 0;
   --blur: 0;
 }
 
@@ -62,4 +62,9 @@ body {
   height: auto;
   border-radius: 10px;
   filter: blur(var(--blur));
+  transform: translate(var(--spacing), var(--spacing));
+}
+
+.highlight {
+  color: var(--base);
 }
